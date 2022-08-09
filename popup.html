@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="./popup.css">
+<script defer src="./popup.js"></script>
+<script defer src="./action.js"></script>
+
+<div class="container">
+    <div class="header">
+        <h3 class="title">Remind</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+            <path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path>
+        </svg>
+    </div>
+    <div class="body">
+        <div class="main">
+            <ul class="remind-list">
+                <!-- <li class="remind-item">
+                    <div class="content">
+                        <p class="time">08/08</p>
+                        <p class="description">Birthday to for me some thing lik this i wish every thing is the beginning</p>
+                    </div>
+                    <button>&times;</button>
+                </li>             -->
+            </ul>
+            <button id="add"> &plus;</button>
+        </div>
+        <form class="form-add">
+            <input type="hidden" name="index" id="index">
+            <div class="form-field">
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date">
+            </div>
+            <div class="form-field">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="form-field">
+                <label for="content">Content</label>
+                <input type="text" name="content" id="content">
+            </div>
+            <div class="form-field">
+                <label for="inAdvance">Start remind in advance (day)</label>
+                <div class="number-field">
+                    <button type="button" id="minus">-</button>
+                    <input type="number" name="inAdvance" id="inAdvance" min="1" max="365" value="1">
+                    <button type="button" id="plus">+</button>
+                </div>
+            </div>
+            <div class="form-field check-field">
+                <label for="repeat">Repeat everyday</label>
+                <label for="repeat" class="check-btn">
+                    <input type="checkbox" name="repeat" id="repeat">
+                    <div class="check-bg"></div>
+                </label>
+            </div>
+            <div class="action">
+                <button type="reset" id="cancel">Cancel</button>
+                <button type="submit" id="save">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
